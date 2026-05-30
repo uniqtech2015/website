@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Technologies – Engineering Innovation Into Reality</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <img src="logo.png" alt="Unique Technologies" width="70" style="border-radius:50%;margin-bottom:20px">
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+  <p class="loader-txt">Initializing Systems…</p>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="brand" onclick="goPage('home')">
+      <img src="logo.png" alt="Logo" class="nav-logo-img">
+      <img src="banner.png" alt="Unique Technologies" class="nav-banner-img">
+    </div>
+    <div class="nav-links">
+      <a class="nav-a active" onclick="goPage('home')">Home</a>
+      <div class="nav-drop">
+        <span class="nav-a" onclick="goPage('services')">Services ▾</span>
+        <div class="mega">
+          <div class="mega-col">
+            <a onclick="goPage('services')">⚡ Embedded Systems</a>
+            <a onclick="goPage('services')">💾 Firmware Dev</a>
+            <a onclick="goPage('services')">🔌 PCB Design</a>
+            <a onclick="goPage('services')">🏭 PCB Manufacturing</a>
+          </div>
+          <div class="mega-col">
+            <a onclick="goPage('services')">📡 IoT Solutions</a>
+            <a onclick="goPage('services')">💻 Software Solutions</a>
+            <a onclick="goPage('services')">🏗️ Industrial Automation</a>
+            <a onclick="goPage('services')">🔧 Hardware Prototyping</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <span class="nav-a" onclick="goPage('products')">Products ▾</span>
+        <div class="mega single">
+          <div class="mega-col">
+            <a onclick="goPage('products')">🖥️ Dev Boards</a>
+            <a onclick="goPage('products')">📦 Embedded Modules</a>
+            <a onclick="goPage('products')">📡 IoT Devices</a>
+            <a onclick="goPage('products')">⚙️ Industrial Controllers</a>
+          </div>
+        </div>
+      </div>
+      <a class="nav-a" onclick="goPage('industries')">Industries</a>
+      <a class="nav-a" onclick="goPage('about')">About</a>
+      <a class="nav-a" onclick="goPage('contact')">Contact</a>
+    </div>
+    <button class="cta-btn" onclick="goPage('contact')">Get Quote</button>
+    <button class="hamburger" onclick="toggleMob()" id="hamBtn">☰</button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobMenu">
+  <a onclick="goPage('home');toggleMob()">Home</a>
+  <a onclick="goPage('services');toggleMob()">Services</a>
+  <a onclick="goPage('products');toggleMob()">Products</a>
+  <a onclick="goPage('industries');toggleMob()">Industries</a>
+  <a onclick="goPage('about');toggleMob()">About</a>
+  <a onclick="goPage('contact');toggleMob()">Contact</a>
+  <button class="cta-btn" style="width:100%;margin-top:12px" onclick="goPage('contact');toggleMob()">Get Quote →</button>
+</div>
+
+<!-- ══════════════════════════ HOME ══════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="circuit-line" style="top:22%;animation-delay:0s"></div>
+    <div class="circuit-line" style="top:55%;animation-delay:2.5s"></div>
+    <div class="circuit-line" style="top:78%;animation-delay:1.2s"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="badge">🟠 Live · Engineering Excellence Since 2015</span>
+        <p class="tagline">// Providing Technical Support to the Youth</p>
+        <h1>Engineering<br><span>Innovation</span><br>Into Reality</h1>
+        <p class="hero-desc">Unique Technologies delivers world-class embedded systems, PCB design, IoT, and industrial automation — transforming your ideas into production-ready electronics from Hubballi, Karnataka.</p>
+        <div class="hero-btns">
+          <button class="btn-orange" onclick="goPage('services')">Explore Services →</button>
+          <button class="btn-ghost" onclick="goPage('contact')">📋 Get a Quote</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><span class="hnum" data-n="500">0</span><span class="hplus">+</span><br><small>Projects</small></div>
+          <div class="hstat"><span class="hnum" data-n="98">0</span><span class="hplus">%</span><br><small>Satisfaction</small></div>
+          <div class="hstat"><span class="hnum" data-n="10">0</span><span class="hplus">+</span><br><small>Years Active</small></div>
+          <div class="hstat"><span class="hnum" data-n="120">0</span><span class="hplus">+</span><br><small>Clients</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit-wrap">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="hero-core"><img src="logo.png" alt="UT"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>⚡ ARM Cortex-M</span><span>🔌 FreeRTOS</span><span>📡 MQTT/LoRaWAN</span><span>🔧 KiCad/Altium</span>
+      <span>💻 Embedded C/C++</span><span>🌐 ESP32/STM32</span><span>⚙️ PLC/SCADA</span><span>📊 RTOS</span>
+      <span>🖥️ Raspberry Pi</span><span>📦 SMT Assembly</span><span>🛡️ IPC-A-610</span><span>🔬 Signal Integrity</span>
+      <!-- repeat for seamless loop -->
+      <span>⚡ ARM Cortex-M</span><span>🔌 FreeRTOS</span><span>📡 MQTT/LoRaWAN</span><span>🔧 KiCad/Altium</span>
+      <span>💻 Embedded C/C++</span><span>🌐 ESP32/STM32</span><span>⚙️ PLC/SCADA</span><span>📊 RTOS</span>
+      <span>🖥️ Raspberry Pi</span><span>📦 SMT Assembly</span><span>🛡️ IPC-A-610</span><span>🔬 Signal Integrity</span>
+    </div>
+  </div>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-tag">// What We Do</span>
+        <h2>Comprehensive Engineering Solutions</h2>
+        <p>From concept to deployment — every phase of embedded electronics development with precision.</p>
+      </div>
+      <div class="cards-6">
+        <div class="scard reveal" onclick="goPage('services')">
+          <div class="scard-icon">⚡</div>
+          <h3>Embedded Systems</h3>
+          <p>Custom microcontroller solutions from bare-metal to RTOS-based architectures.</p>
+          <div class="tags"><span>ARM</span><span>STM32</span><span>RTOS</span></div>
+        </div>
+        <div class="scard reveal" onclick="goPage('services')">
+          <div class="scard-icon">🔌</div>
+          <h3>PCB Design & Mfg</h3>
+          <p>Full-stack PCB engineering — multi-layer, high-speed, and flex-rigid boards.</p>
+          <div class="tags"><span>Altium</span><span>KiCad</span><span>SMT</span></div>
+        </div>
+        <div class="scard reveal" onclick="goPage('services')">
+          <div class="scard-icon">📡</div>
+          <h3>IoT Solutions</h3>
+          <p>End-to-end IoT ecosystems with edge computing and cloud connectivity.</p>
+          <div class="tags"><span>MQTT</span><span>ESP32</span><span>AWS IoT</span></div>
+        </div>
+        <div class="scard reveal" onclick="goPage('services')">
+          <div class="scard-icon">💻</div>
+          <h3>Software Solutions</h3>
+          <p>Embedded firmware, device drivers, and industrial software applications.</p>
+          <div class="tags"><span>C/C++</span><span>Python</span><span>Linux</span></div>
+        </div>
+        <div class="scard reveal" onclick="goPage('services')">
+          <div class="scard-icon">🏭</div>
+          <h3>Industrial Automation</h3>
+          <p>PLC programming, SCADA systems, and smart manufacturing solutions.</p>
+          <div class="tags"><span>PLC</span><span>SCADA</span><span>HMI</span></div>
+        </div>
+        <div class="scard reveal" onclick="goPage('services')">
+          <div class="scard-icon">🔧</div>
+          <h3>Hardware Prototyping</h3>
+          <p>Rapid prototyping from concept to functional proof-of-concept.</p>
+          <div class="tags"><span>DFM</span><span>BOM</span><span>Rapid Proto</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="container stats-row">
+      <div class="stat-item"><div class="stat-n counter" data-n="500">0</div><div class="stat-l">Projects Completed</div></div>
+      <div class="stat-item"><div class="stat-n counter" data-n="120">0</div><div class="stat-l">Clients Worldwide</div></div>
+      <div class="stat-item"><div class="stat-n counter" data-n="98">0</div><div class="stat-l">% On-Time Delivery</div></div>
+      <div class="stat-item"><div class="stat-n counter" data-n="10">0</div><div class="stat-l">Years Experience</div></div>
+    </div>
+  </div>
+
+  <!-- PCB WORKFLOW -->
+  <section class="section dark-section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-tag">// Our Process</span>
+        <h2 class="light">PCB Fabrication Workflow</h2>
+        <p class="light">A rigorous, quality-driven process from design to delivery.</p>
+      </div>
+      <div class="process-flow reveal">
+        <div class="pstep"><div class="picon">📋</div><div class="pt">Requirements</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">✏️</div><div class="pt">Schematic</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">📐</div><div class="pt">PCB Layout</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">🔬</div><div class="pt">DFM Review</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">🏭</div><div class="pt">Fabrication</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">⚙️</div><div class="pt">Assembly</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">✅</div><div class="pt">Testing</div></div>
+        <div class="parrow">→</div>
+        <div class="pstep"><div class="picon">📦</div><div class="pt">Delivery</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section dark-section" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-tag">// Why Choose Us</span>
+        <h2 class="light">Built on Excellence, Delivered with Precision</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><div class="why-n">01</div><h4>End-to-End Capability</h4><p>Firmware to final product — every stage handled in-house for seamless integration.</p></div>
+        <div class="why-card reveal"><div class="why-n">02</div><h4>Youth-Focused Training</h4><p>Empowering young engineers with hands-on technical education and mentoring.</p></div>
+        <div class="why-card reveal"><div class="why-n">03</div><h4>Production Quality</h4><p>IPC-certified processes, rigorous DFM validation, and AOI at every stage.</p></div>
+        <div class="why-card reveal"><div class="why-n">04</div><h4>Agile Development</h4><p>Rapid iteration cycles and transparent communication keep projects on track.</p></div>
+        <div class="why-card reveal"><div class="why-n">05</div><h4>Multi-Domain Expertise</h4><p>Embedded, RF, power electronics, and software — under one roof.</p></div>
+        <div class="why-card reveal"><div class="why-n">06</div><h4>Local Presence, Global Standards</h4><p>Hubballi-based with international engineering practices and quality standards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section dark-section" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-tag">// Testimonials</span>
+        <h2 class="light">What Our Clients Say</h2>
+      </div>
+      <div class="test-grid">
+        <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Unique Technologies delivered our IoT gateway firmware ahead of schedule. Outstanding embedded expertise throughout."</p>
+          <div class="tauthor"><div class="tavatar">👤</div><div><b>Rajesh Kulkarni</b><br><small>TechVentures, Bengaluru</small></div></div>
+        </div>
+        <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
+          <p>"First-pass success on a complex 8-layer board. The PCB design team understood our requirements immediately."</p>
+          <div class="tauthor"><div class="tavatar">👤</div><div><b>Priya Sharma</b><br><small>IndustrialSync, Pune</small></div></div>
+        </div>
+        <div class="tcard reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Their industrial automation solution reduced our downtime by 35%. The SCADA integration was seamless."</p>
+          <div class="tauthor"><div class="tavatar">👤</div><div><b>Mohammed Zakir</b><br><small>SmartFactory, Hyderabad</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section dark-section" style="padding-top:0">
+    <div class="container">
+      <div class="sec-head reveal" style="text-align:center">
+        <span class="sec-tag">// FAQ</span>
+        <h2 class="light">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="fitem"><div class="fq" onclick="faqToggle(this)"><span>What is your minimum order quantity for PCBs?</span><span class="fi">+</span></div><div class="fa">We accept prototype quantities starting from 5 units, with volume pricing for orders of 100+. Contact us for custom quotes on large production runs.</div></div>
+        <div class="fitem"><div class="fq" onclick="faqToggle(this)"><span>What microcontroller families do you support?</span><span class="fi">+</span></div><div class="fa">Deep expertise in ARM Cortex-M (STM32, LPC), ESP32/ESP8266, AVR, PIC, TI MSP430, and RISC-V platforms. We also support FPGA-based designs.</div></div>
+        <div class="fitem"><div class="fq" onclick="faqToggle(this)"><span>How long does a typical embedded project take?</span><span class="fi">+</span></div><div class="fa">Simple firmware modules: 2–4 weeks. Full product development (hardware + software + certification): 3–6 months. Timeline depends on complexity.</div></div>
+        <div class="fitem"><div class="fq" onclick="faqToggle(this)"><span>Do you provide training for engineering students?</span><span class="fi">+</span></div><div class="fa">Yes! Providing technical support to youth is central to our mission. We offer internships, workshops, PCB training, and embedded systems courses from our Hubballi facility.</div></div>
+        <div class="fitem"><div class="fq" onclick="faqToggle(this)"><span>What quality standards do you follow?</span><span class="fi">+</span></div><div class="fa">PCB assembly follows IPC-A-610 Class 2/3. We perform DFM analysis, AOI inspection, and functional testing on all assemblies before delivery.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-band">
+    <div class="container" style="text-align:center">
+      <h2>Ready to Build Your Next Innovation?</h2>
+      <p>From concept to production — Unique Technologies is your end-to-end engineering partner.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px">
+        <button class="btn-orange" onclick="goPage('contact')">Start Your Project →</button>
+        <button class="btn-ghost" onclick="goPage('services')">View All Services</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /home -->
+
+<!-- ══════════════════════════ SERVICES ══════════════════════════ -->
+<div id="page-services" class="page">
+  <div class="page-hdr">
+    <div class="container">
+      <div class="breadcrumb"><a onclick="goPage('home')">Home</a> / Services</div>
+      <h1>Engineering Services</h1>
+      <p>Comprehensive electronics engineering — from embedded firmware to industrial automation.</p>
+    </div>
+  </div>
+  <section class="section dark-section">
+    <div class="container">
+      <div class="srv-list">
+        <div class="srv-card reveal">
+          <div class="srv-ico">⚡</div>
+          <div class="srv-body">
+            <h3>Embedded Systems</h3>
+            <p>We design and develop complete embedded systems from bare-metal to RTOS architectures across ARM Cortex-M, AVR, PIC, and RISC-V platforms.</p>
+            <ul><li>Real-time firmware &amp; device drivers</li><li>BSP development</li><li>Power management</li><li>OTA update systems</li></ul>
+            <div class="tags"><span>ARM Cortex</span><span>STM32</span><span>FreeRTOS</span><span>Zephyr</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">💾</div>
+          <div class="srv-body">
+            <h3>Firmware Development</h3>
+            <p>Production-quality firmware engineered for reliability. HAL/LL driver development with full documentation and unit testing.</p>
+            <ul><li>Communication protocols (UART/SPI/I2C/USB/CAN)</li><li>Sensor integration</li><li>Power optimization</li><li>MISRA-C compliance</li></ul>
+            <div class="tags"><span>C/C++</span><span>MISRA-C</span><span>UART/SPI/I2C</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">🔌</div>
+          <div class="srv-body">
+            <h3>PCB Design</h3>
+            <p>2-layer to 16-layer high-speed designs with DFM-optimized layouts and full signal integrity analysis.</p>
+            <ul><li>Schematic capture</li><li>Multi-layer routing</li><li>SI/PI analysis</li><li>Impedance-controlled stacks</li></ul>
+            <div class="tags"><span>Altium</span><span>KiCad</span><span>Flex PCB</span><span>HDI</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">🏭</div>
+          <div class="srv-body">
+            <h3>PCB Manufacturing</h3>
+            <p>End-to-end fabrication and assembly — BOM sourcing, SMT/THT placement, reflow, wave soldering, AOI, and functional testing.</p>
+            <ul><li>SMT &amp; through-hole assembly</li><li>AOI &amp; X-ray inspection</li><li>ICT &amp; functional test</li><li>Conformal coating</li></ul>
+            <div class="tags"><span>SMT</span><span>IPC-A-610</span><span>AOI</span><span>BOM Mgmt</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">📡</div>
+          <div class="srv-body">
+            <h3>IoT Development</h3>
+            <p>Complete IoT ecosystems — sensor nodes, edge gateways, cloud dashboards, and mobile apps with security built-in.</p>
+            <ul><li>BLE / WiFi / LoRa / 4G</li><li>MQTT / CoAP protocols</li><li>AWS IoT / Azure IoT Hub</li><li>Edge ML &amp; secure boot</li></ul>
+            <div class="tags"><span>ESP32</span><span>LoRaWAN</span><span>MQTT</span><span>AWS IoT</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">💻</div>
+          <div class="srv-body">
+            <h3>Software Solutions</h3>
+            <p>HMI applications, data acquisition systems, protocol converters, and custom engineering tools.</p>
+            <ul><li>Embedded Linux</li><li>Qt / HMI applications</li><li>Python automation</li><li>OPC-UA / MODBUS</li></ul>
+            <div class="tags"><span>Linux</span><span>Qt</span><span>Python</span><span>OPC-UA</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">🏗️</div>
+          <div class="srv-body">
+            <h3>Industrial Automation</h3>
+            <p>PLC programming to full SCADA integration, enabling smart factory capabilities for manufacturing clients.</p>
+            <ul><li>PLC programming (Siemens / Allen-Bradley)</li><li>SCADA &amp; HMI</li><li>Motion control</li><li>MES integration</li></ul>
+            <div class="tags"><span>Siemens</span><span>SCADA</span><span>HMI</span><span>Modbus</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+        <div class="srv-card reveal">
+          <div class="srv-ico">🔧</div>
+          <div class="srv-body">
+            <h3>Hardware Prototyping</h3>
+            <p>Rapid prototype development from concept to functional proof-of-concept with full engineering documentation.</p>
+            <ul><li>DFM analysis</li><li>BOM optimisation</li><li>3D mechanical integration</li><li>Prototype testing</li></ul>
+            <div class="tags"><span>Rapid Proto</span><span>BOM</span><span>DFM</span></div>
+            <button class="btn-orange sm" onclick="goPage('contact')">Get Consultation →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-band"><div class="container" style="text-align:center"><h2>Have a Project in Mind?</h2><p>Let's discuss your engineering requirements and build the right solution together.</p><button class="btn-orange" style="margin-top:20px" onclick="goPage('contact')">Contact Our Engineers →</button></div></div>
+</div>
+
+<!-- ══════════════════════════ PRODUCTS ══════════════════════════ -->
+<div id="page-products" class="page">
+  <div class="page-hdr">
+    <div class="container">
+      <div class="breadcrumb"><a onclick="goPage('home')">Home</a> / Products</div>
+      <h1>Product Catalog</h1>
+      <p>Engineering-grade development boards, embedded modules, IoT devices, and industrial controllers.</p>
+    </div>
+  </div>
+  <section class="section dark-section">
+    <div class="container">
+      <div class="filters">
+        <button class="fbtn active" onclick="filterProd(this,'all')">All</button>
+        <button class="fbtn" onclick="filterProd(this,'dev')">Dev Boards</button>
+        <button class="fbtn" onclick="filterProd(this,'mod')">Modules</button>
+        <button class="fbtn" onclick="filterProd(this,'iot')">IoT Devices</button>
+        <button class="fbtn" onclick="filterProd(this,'ind')">Industrial</button>
+        <button class="fbtn" onclick="filterProd(this,'sns')">Sensors</button>
+      </div>
+      <div class="prod-grid" id="prodGrid">
+        <div class="pcard" data-cat="dev">
+          <div class="pimg">🖥️<span class="pbadge">NEW</span></div>
+          <div class="pbody">
+            <div class="pcat">Development Board</div>
+            <h4>UT-M4 Pro Dev Kit</h4>
+            <p>STM32H743 Cortex-M7 @ 480 MHz with integrated JTAG, Ethernet, USB-HS, and 32 MB SDRAM.</p>
+            <table class="spec-tbl"><tr><td>CPU</td><td>STM32H743</td></tr><tr><td>Flash</td><td>2 MB + 32 MB</td></tr><tr><td>I/O</td><td>168 GPIO</td></tr><tr><td>USB</td><td>HS + FS</td></tr></table>
+            <div class="pbtns"><button class="btn-out">📄 Datasheet</button><button class="btn-blue" onclick="goPage('contact')">Enquire</button></div>
+          </div>
+        </div>
+        <div class="pcard" data-cat="iot">
+          <div class="pimg">📡<span class="pbadge pop">POPULAR</span></div>
+          <div class="pbody">
+            <div class="pcat">IoT Gateway</div>
+            <h4>UT-IoT Gateway G1</h4>
+            <p>Multi-protocol gateway supporting WiFi, BLE, LoRaWAN, and 4G LTE with edge processing.</p>
+            <table class="spec-tbl"><tr><td>CPU</td><td>ESP32-S3</td></tr><tr><td>RAM</td><td>8 MB PSRAM</td></tr><tr><td>Radio</td><td>WiFi+BT+LoRa</td></tr><tr><td>I/O</td><td>RS485/CAN</td></tr></table>
+            <div class="pbtns"><button class="btn-out">📄 Datasheet</button><button class="btn-blue" onclick="goPage('contact')">Enquire</button></div>
+          </div>
+        </div>
+        <div class="pcard" data-cat="mod">
+          <div class="pimg">📦</div>
+          <div class="pbody">
+            <div class="pcat">Embedded Module</div>
+            <h4>UT-ARM Compute Module</h4>
+            <p>Production-ready SoM with STM32MP157, LPDDR2, eMMC, and PMIC.</p>
+            <table class="spec-tbl"><tr><td>CPU</td><td>STM32MP157</td></tr><tr><td>RAM</td><td>512 MB DDR</td></tr><tr><td>Storage</td><td>4 GB eMMC</td></tr><tr><td>OS</td><td>Linux / RT</td></tr></table>
+            <div class="pbtns"><button class="btn-out">📄 Datasheet</button><button class="btn-blue" onclick="goPage('contact')">Enquire</button></div>
+          </div>
+        </div>
+        <div class="pcard" data-cat="ind">
+          <div class="pimg">⚙️<span class="pbadge rug">RUGGED</span></div>
+          <div class="pbody">
+            <div class="pcat">Industrial Controller</div>
+            <h4>UT-PLC Controller S1</h4>
+            <p>DIN-rail mounted controller with 24 DI/DO, 8 AI/AO, MODBUS RTU/TCP, −40 °C to +85 °C.</p>
+            <table class="spec-tbl"><tr><td>CPU</td><td>Cortex-M4</td></tr><tr><td>I/O</td><td>32 DI/DO</td></tr><tr><td>Protocol</td><td>MODBUS/CAN</td></tr><tr><td>Temp</td><td>−40~+85 °C</td></tr></table>
+            <div class="pbtns"><button class="btn-out">📄 Datasheet</button><button class="btn-blue" onclick="goPage('contact')">Enquire</button></div>
+          </div>
+        </div>
+        <div class="pcard" data-cat="sns">
+          <div class="pimg">🔬</div>
+          <div class="pbody">
+            <div class="pcat">Sensor Module</div>
+            <h4>UT-EnvSense Pro</h4>
+            <p>5-in-1 environmental sensor node: Temp, Humidity, CO₂, PM2.5, VOC with wireless TX.</p>
+            <table class="spec-tbl"><tr><td>Sensors</td><td>5-in-1</td></tr><tr><td>Radio</td><td>LoRa / BLE</td></tr><tr><td>Battery</td><td>2-yr life</td></tr><tr><td>IP</td><td>IP67</td></tr></table>
+            <div class="pbtns"><button class="btn-out">📄 Datasheet</button><button class="btn-blue" onclick="goPage('contact')">Enquire</button></div>
+          </div>
+        </div>
+        <div class="pcard" data-cat="iot">
+          <div class="pimg">🏠</div>
+          <div class="pbody">
+            <div class="pcat">Smart Home Module</div>
+            <h4>UT-SmartEdge H1</h4>
+            <p>Compact hub supporting Zigbee, Z-Wave, Matter, and WiFi with local AI processing.</p>
+            <table class="spec-tbl"><tr><td>CPU</td><td>ESP32-C6</td></tr><tr><td>Protocols</td><td>Zigbee/Matter</td></tr><tr><td>Power</td><td>USB-C 5W</td></tr><tr><td>Storage</td><td>8 MB Flash</td></tr></table>
+            <div class="pbtns"><button class="btn-out">📄 Datasheet</button><button class="btn-blue" onclick="goPage('contact')">Enquire</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════ INDUSTRIES ══════════════════════════ -->
+<div id="page-industries" class="page">
+  <div class="page-hdr">
+    <div class="container">
+      <div class="breadcrumb"><a onclick="goPage('home')">Home</a> / Industries</div>
+      <h1>Industries We Serve</h1>
+      <p>Tailored electronics solutions across diverse sectors with specialized industry requirements.</p>
+    </div>
+  </div>
+  <section class="section dark-section">
+    <div class="container">
+      <div class="ind-grid">
+        <div class="icard reveal"><div class="iico">🚗</div><h4>Automotive</h4><p>In-vehicle electronics, CAN bus systems, ADAS sensor integration, and AEC-Q100 compliant PCBs.</p></div>
+        <div class="icard reveal"><div class="iico">🏥</div><h4>Medical</h4><p>Medical device firmware, patient monitoring electronics, ISO 13485-aligned design for life-critical applications.</p></div>
+        <div class="icard reveal"><div class="iico">🏭</div><h4>Industrial</h4><p>Ruggedized controllers, factory automation hardware, predictive maintenance, and IEC 61131 PLC solutions.</p></div>
+        <div class="icard reveal"><div class="iico">📱</div><h4>Consumer Electronics</h4><p>Cost-optimized BOM, high-reliability assembly, and DFM for high-volume production.</p></div>
+        <div class="icard reveal"><div class="iico">☀️</div><h4>Renewable Energy</h4><p>Solar inverter electronics, battery management systems, smart metering, and energy monitoring IoT.</p></div>
+        <div class="icard reveal"><div class="iico">🤖</div><h4>Robotics</h4><p>Motor control firmware, real-time kinematics, sensor fusion, and robot control PCB design.</p></div>
+        <div class="icard reveal"><div class="iico">📶</div><h4>Telecom</h4><p>Network hardware, RF front-end modules, protocol converters, and MIL-spec PCBs.</p></div>
+        <div class="icard reveal"><div class="iico">🌐</div><h4>Smart Devices</h4><p>Wearables, smart appliances, connected sensors, and IoT-enabled consumer devices.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="page-hdr">
+    <div class="container">
+      <div class="breadcrumb"><a onclick="goPage('home')">Home</a> / About</div>
+      <h1>About Unique Technologies</h1>
+      <p>Engineering innovation and technical education — our twin pillars since 2015.</p>
+    </div>
+  </div>
+  <section class="section dark-section">
+    <div class="container">
+      <div class="about-2col">
+        <div class="reveal">
+          <span class="sec-tag">// Our Story</span>
+          <h2 class="light" style="font-size:clamp(22px,3vw,34px);margin-bottom:16px">Built on a Passion for Engineering &amp; Education</h2>
+          <p class="abt-p">Unique Technologies was founded in Hubballi with a dual mission: delivering world-class electronics engineering services, and empowering young engineers with the technical skills they need.</p>
+          <p class="abt-p">From our facility on Gokul Road, our experienced engineers have completed 500+ projects spanning embedded systems, PCB design, industrial automation, and IoT — while training hundreds of engineering students.</p>
+          <div class="abt-nums">
+            <div class="abn"><div class="abn-n">500+</div><div class="abn-l">Projects</div></div>
+            <div class="abn"><div class="abn-n">1000+</div><div class="abn-l">Students Trained</div></div>
+            <div class="abn"><div class="abn-n">10+</div><div class="abn-l">Years Active</div></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="mv-card"><div style="font-size:28px;margin-bottom:8px">🎯</div><h4>Mission</h4><p>Deliver cutting-edge electronics engineering solutions that drive client success, while providing technical education and career support to the next generation of engineers.</p></div>
+          <div class="mv-card"><div style="font-size:28px;margin-bottom:8px">🔭</div><h4>Vision</h4><p>To become India's most trusted embedded electronics company, recognised for technical excellence, youth empowerment, and innovation bridging education with industry.</p></div>
+          <div class="mv-card" style="background:rgba(230,81,0,0.08);border-color:rgba(230,81,0,0.2)"><div style="font-size:18px">📍 Gokul Road, Hubballi 580024, Karnataka</div></div>
+        </div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="sec-head reveal" style="margin-top:60px">
+        <span class="sec-tag">// Our Journey</span>
+        <h2 class="light">Company Timeline</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-yr">2015</div><h4>Company Founded</h4><p>Unique Technologies established in Hubballi, Karnataka with a focus on embedded systems and technical training for youth.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-yr">2017</div><h4>PCB Division Launch</h4><p>Expanded capabilities with dedicated PCB design and manufacturing infrastructure.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-yr">2019</div><h4>IoT Practice Started</h4><p>Launched IoT and Industry 4.0 practice, delivering smart factory solutions across Karnataka.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-yr">2021</div><h4>500+ Students Milestone</h4><p>Reached 500+ engineering students trained through workshops, internships, and embedded courses.</p></div>
+        <div class="tl-item reveal"><div class="tl-dot"></div><div class="tl-yr">2024</div><h4>Product Line Launch</h4><p>Launched own embedded development boards and IoT gateway products under the UT product brand.</p></div>
+      </div>
+
+      <!-- TEAM -->
+      <div class="sec-head reveal" style="margin-top:60px">
+        <span class="sec-tag">// The People</span>
+        <h2 class="light">Our Engineering Team</h2>
+      </div>
+      <div class="team-grid">
+        <div class="tm-card reveal"><div class="tm-av">👨‍💼</div><h4>Founder &amp; CEO</h4><p class="tm-role">Embedded Systems Expert</p><p>15+ years in embedded hardware &amp; firmware across automotive and industrial domains.</p></div>
+        <div class="tm-card reveal"><div class="tm-av">👨‍🔬</div><h4>Lead PCB Engineer</h4><p class="tm-role">PCB Design Specialist</p><p>Expert in high-speed board design, signal integrity, and IPC-A-610 Class 3 assembly.</p></div>
+        <div class="tm-card reveal"><div class="tm-av">👩‍💻</div><h4>Head of IoT</h4><p class="tm-role">IoT Solutions Architect</p><p>Secure IoT ecosystems, edge ML, and cloud platform integration for industrial clients.</p></div>
+        <div class="tm-card reveal"><div class="tm-av">👨‍🏫</div><h4>Training Lead</h4><p class="tm-role">Technical Educator</p><p>Empowering young engineers through hands-on embedded workshops and internship mentoring.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════ CONTACT ══════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="page-hdr">
+    <div class="container">
+      <div class="breadcrumb"><a onclick="goPage('home')">Home</a> / Contact</div>
+      <h1>Get In Touch</h1>
+      <p>Ready to start your project? Our engineers are standing by.</p>
+    </div>
+  </div>
+  <section class="section dark-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="info-card reveal">
+            <h3>Contact Information</h3>
+            <div class="cinfo"><span>📍</span><div><b>Address</b><br>Unique Technologies<br>Gokul Road, Hubballi 580024<br>Karnataka, India</div></div>
+            <div class="cinfo"><span>📧</span><div><b>Email</b><br>info@uniquetech.in<br>projects@uniquetech.in</div></div>
+            <div class="cinfo"><span>📞</span><div><b>Phone</b><br>+91 XXXXX XXXXX</div></div>
+            <div class="cinfo"><span>🕐</span><div><b>Hours</b><br>Mon – Sat, 9 AM – 6 PM IST</div></div>
+          </div>
+          <div class="map-ph reveal">🗺️<br><b>Gokul Road, Hubballi 580024</b><br><small>Google Maps Integration</small></div>
+        </div>
+        <div class="form-card reveal">
+          <h3>Business Enquiry</h3>
+          <div class="form-row">
+            <div class="fg"><label>First Name</label><input type="text" placeholder="Rajesh"></div>
+            <div class="fg"><label>Last Name</label><input type="text" placeholder="Kulkarni"></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Email</label><input type="email" placeholder="rajesh@company.com"></div>
+            <div class="fg"><label>Phone</label><input type="tel" placeholder="+91 98765 43210"></div>
+          </div>
+          <div class="fg"><label>Company</label><input type="text" placeholder="Your Company Name"></div>
+          <div class="fg">
+            <label>Service Required</label>
+            <select>
+              <option>Select a service…</option>
+              <option>Embedded Systems Development</option>
+              <option>PCB Design</option>
+              <option>PCB Manufacturing</option>
+              <option>IoT Solutions</option>
+              <option>Industrial Automation</option>
+              <option>Software Solutions</option>
+              <option>Hardware Prototyping</option>
+              <option>Training / Workshop</option>
+            </select>
+          </div>
+          <div class="fg"><label>Project Description</label><textarea placeholder="Describe your project requirements, timeline, and expected deliverables…"></textarea></div>
+          <button class="btn-submit" onclick="submitForm()">Send Enquiry →</button>
+          <div id="formMsg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Logo" class="ft-logo">
+      <img src="banner.jpg" alt="Unique Technologies" class="ft-banner">
+      <p>Providing technical support to the youth. Electronics engineering from Hubballi, Karnataka.</p>
+      <div class="ft-socials"><a href="#" title="LinkedIn">in</a><a href="#" title="X">𝕏</a><a href="#" title="YouTube">▶</a><a href="#" title="Instagram">📸</a></div>
+    </div>
+    <div class="ft-col"><h5>Services</h5><ul><li><a onclick="goPage('services')">Embedded Systems</a></li><li><a onclick="goPage('services')">Firmware Dev</a></li><li><a onclick="goPage('services')">PCB Design</a></li><li><a onclick="goPage('services')">PCB Manufacturing</a></li><li><a onclick="goPage('services')">IoT Solutions</a></li><li><a onclick="goPage('services')">Industrial Automation</a></li></ul></div>
+    <div class="ft-col"><h5>Company</h5><ul><li><a onclick="goPage('about')">About Us</a></li><li><a onclick="goPage('industries')">Industries</a></li><li><a onclick="goPage('products')">Products</a></li><li><a onclick="goPage('contact')">Careers</a></li><li><a onclick="goPage('contact')">Training</a></li><li><a onclick="goPage('contact')">Contact</a></li></ul></div>
+    <div class="ft-col"><h5>Newsletter</h5><p>Stay updated with latest projects, tech articles, and training programs.</p><div class="nl-form"><input type="email" placeholder="your@email.com"><button>Subscribe</button></div><p style="font-size:12px;color:#64748B;margin-top:16px">📍 Gokul Road, Hubballi 580024<br>📧 info@uniquetech.in</p></div>
+  </div>
+  <div class="footer-bar"><span>© 2025 Unique Technologies, Hubballi. All rights reserved.</span><div class="ft-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
